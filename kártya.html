@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>card</title>
+    </head>
+    <body>
+        <!-- <div class="card">
+            <img id="top_right" src="H:\dk\bkv\kártya\logo.png" width="55" height="55">
+            <img id="bottom_left" src="H:\dk\bkv\kártya\logo.png" width="55" height="55">
+            <p id="inner_text">Mennyibe kerül egy helyi járatos bérlet?</p>
+        </div> -->
+        <button id="createCardButton" onclick="createCard()">Create a card</button>
+        <div id="__card"></div>
+        <script>
+            setInterval(function() {
+                location.reload();
+            }, 60000);
+        </script>
+        <script>
+            function createCard() {
+                const card = document.createElement("div")
+                card.setAttribute("class", "card");
+                
+                const top_right = document.createElement("img");
+                top_right.setAttribute("id", "top_right");
+                top_right.setAttribute("width", 55);
+                top_right.setAttribute("height", 55);
+                top_right.setAttribute("src", "/logo.png");
+                card.appendChild(top_right); 
+
+                const bottom_left = document.createElement("img");
+                bottom_left.setAttribute("id", "bottom_left");
+                bottom_left.setAttribute("width", 55);
+                bottom_left.setAttribute("height", 55);
+                bottom_left.setAttribute("src", "/logo.png");
+                card.appendChild(bottom_left);
+
+                document.getElementById("__card").appendChild(card);
+            }
+        </script>
+    </body>
+    <style>
+        body {
+            background-color: black;
+        }
+        
+
+        #top_right {
+            position: absolute;
+            right: 0px;
+        }
+
+        #bottom_left {
+            position: absolute;
+            bottom: 0px;
+        }
+
+        #inner_text {
+            font: bold;
+            font-family: Calibri;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 50%;
+            position: absolute;
+        }
+
+        #__card {
+            background-color: lightgray;
+            color: black;
+            border: 3px solid yellow;
+
+            text-align: center center;
+
+            margin: 20px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 3px;
+            padding-right: 3px;
+            position: absolute;
+            left: 0px;
+            right: 400px;
+            bottom: 200px;
+            top: 0px;
+        }
+    </style>
+</html>
