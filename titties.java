@@ -1,11 +1,15 @@
+import java.util.*;
+
 public class Main {
 	public static void main(String[] args) {
-		String str = "danoyoc egy budos buzi";
-		for (int i = 0; i < str.length(); i++) {
-		    if (i%2==0) {
-		        str = str.replace(""+str.charAt(i), (""+str.charAt(i)).toUpperCase());
-		    }
+		String xd = "a mate egy budos buzi";
+		StringBuilder sb = new StringBuilder();
+		int offset = 0;
+		for (int i = 0; i < xd.length(); i++) {
+		    char c = xd.charAt(i);
+		    if (c == ' ') offset++;
+		    sb.append((i+offset)%2 == 0 ? c : Character.toUpperCase(c));
 		}
-		System.out.println(str);
+		System.out.println(sb);
 	}
-}
+}ff
