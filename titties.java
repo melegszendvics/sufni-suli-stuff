@@ -1,11 +1,11 @@
 public class Main {
 	public static void main(String[] args) {
-		String xd = "random"
-		for (int i = 0; i<xd.length(); i++) {
-		    if (i%==0) {
-		        xd = xd.replace(xd.charAt(i), ((String) xd.chatAt(i)).toUpperCase());
+		String str = "danoyoc egy budos buzi";
+		for (int i = 0; i < str.length(); i++) {
+		    if (i%2==0) {
+		        str = str.replace(""+str.charAt(i), (""+str.charAt(i)).toUpperCase());
 		    }
 		}
-		System.out.println(xd);
+		System.out.println(str);
 	}
 }
